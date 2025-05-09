@@ -1,0 +1,234 @@
+/* General Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hwb(44 35% 25%);
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between the logo and brand name */
+}
+
+/* Logo */
+.logo {
+  height: 50px; /* Adjust logo size */
+}
+
+/* Brand Name */
+.brand-name {
+  font-size: 24px; /* Adjust font size for the brand name */
+  font-weight: bold;
+  font-family: serif;
+  color: white; /* Match the navbar text color */
+}
+
+/* Welcome Message */
+.welcome-message {
+  color: white; /* Ensure the text color contrasts with the background */
+  font-size: 14px; /* Adjust font size */
+  font-weight: normal; /* Adjust font weight */
+  text-align: center; /* Center align the text */
+  margin-top: 5px; /* Add spacing below the brand name */
+}
+
+
+/* Search Bar Container */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: hwb(44 35% 25%);
+  border-radius: 5px; /* Slightly rounded corners for a modern look */
+  overflow: hidden;
+  width: 30%;
+  max-width: 700px; /* Increased max width for a wider input box */
+  height: 50px; /* Increased height for a larger search bar */
+  border: 1px solid hwb(44 35% 25%);
+}
+
+/* Search Input */
+.search-bar input {
+  flex: 1;
+  padding: 0 25px; /* Increased padding for better spacing */
+  border: none;
+  font-size: 18px; /* Increased font size for better readability */
+  outline: none;
+  height: 100%; /* Match the height of the search bar */
+}
+
+/* Search Button */
+.search-button:hover {
+  background-color: hwb(44 35% 25%);
+}
+
+.search-button svg {
+  margin-left: auto;
+  width: 100px;
+  height: 100px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  margin-top: -10px; /* Move the button up */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between the icon and text */
+  transition: color 0.3s ease;
+}
+
+/* Dropdowns */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle,
+.login-btn {
+  margin-top: -10px; /* Move the button up */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between the icon and text */
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Login Button */
+.login-btn {
+  margin-top: -10px; /* Move the button up */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between the icon and text */
+  transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+  color: #f0ad4e; /* Change color on hover */
+}
+
+/* Logout Button */
+.logout-btn {
+  margin-top: -10px; /* Move the button up */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Add spacing between the icon and text */
+  transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: hwb(44 35% 25%);
+  color: #f0ad4e; /* Optional: Change text color on hover */
+}
+
+
+/* Menu Icon (Mobile) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+      order: 3;
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #2874f0;
+      padding: 10px 0;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+
+  .dropdown-menu {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      opacity: 1;
+      pointer-events: auto;
+      padding: 5px 0;
+      background: #f8f9fa;
+  }
+
+  .dropdown-menu a {
+      color: #333;
+  }
+}

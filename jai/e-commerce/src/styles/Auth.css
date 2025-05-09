@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering the Auth Container */
+.auth-container {
+  display: flex;
+  justify-content: flex-end; /* Align the form to the right */
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  background-image: url("S:\jai11\jai\e-commerce\src\assets\logo3.png"); /* Ensure the path is correct */
+  background-size: contain; /* Ensure the image covers the container */
+  background-position: left center; /* Move the background image to the left */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-color: #f4f4f4; /* Fallback color */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 300px;
+
+}
+
+/* Auth Box (Login/Signup Form) */
+.auth-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  transition: 0.3s ease-in-out;
+  margin-right: 70px; /* Add spacing from the right edge */
+  margin-bottom: 250px;
+}
+
+.auth-box:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings & Text */
+.auth-box h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.auth-box p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Error Message */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  text-align: left;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Input Fields */
+input {
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%; /* Ensure consistent width */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Input Focus Effect */
+input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Password Input with Toggle */
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px; /* Adjust the horizontal position */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for perfect vertical centering */
+  cursor: pointer;
+  color: #555;
+  font-size: 16px; /* Adjust the size of the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Match the height of the input field */
+}
+
+.password-toggle:hover {
+  color: #007bff;
+}
+
+/* Submit Button */
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background:  hwb(44 35% 25%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: hwb(44 35% 25%);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Signup/Signin Link */
+.signin-link,
+.signup-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.signin-link:hover,
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .auth-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.btn.primary {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn.secondary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn.danger {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.alert.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert.error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.address-cell {
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.order-items {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.order-items li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+

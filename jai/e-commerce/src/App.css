@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  padding: 10px; /* Add padding around the app */
+  margin: 0 auto; /* Center the app horizontally */
+  max-width: 100%; /* Ensure it doesn't exceed the screen width */
+  box-sizing: border-box; /* Include padding and border in the element's total width/height */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin); /* Responsive font size */
+  color: white;
+  padding: 20px; /* Add padding inside the header */
+  box-sizing: border-box;
+}
+
+.App-logo {
+  height: 40vmin; /* Adjust logo size relative to the viewport */
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Reduce font size for smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Reduce logo size */
+  }
+}
